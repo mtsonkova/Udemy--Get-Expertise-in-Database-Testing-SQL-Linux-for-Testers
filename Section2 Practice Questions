@@ -6,12 +6,16 @@ Q2: Fetch & display employee details for the employees having job Title='Sales R
 S2: select * from employees where jobTitle='Sales Rep' and employeeNumber between 1200 and 1500;
 
 Q3: Fetch & display employee details for the employees having office code 2 or more than 2 and job title is not Sales Rep
-S2: select * from employees where officeCode >=2 and jobTitle != 'Sales Rep';
-Q4: Fetch & display customers details(Customers table) who does not belongs to USA
+S3: select * from employees where officeCode >=2 and jobTitle != 'Sales Rep';
 
-Q5: Fetch & display customers details(Customers table)  having customer number not in the range 150 to 200
+Q4: Fetch & display customers details(Customers table) who does not belongs to USA
+S4: select * from customers where country !='USA';
+
+Q5: Fetch & display customers details(Customers table)  having customer number not in the range 150 to 200;
+S5: select * from customers where customerNumber not between 150 and 200;
 
 Q6: List out last name, first name for all employees and rename  last name as “Name of the employee”, display as sorting order of their last name
+S6: select lastName as 'Name of employee', firstName from employees order by lastName;
 
 Q7: List out the customers having credit limit is more than 70000 display in descending order by their last name.
 
