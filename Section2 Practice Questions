@@ -18,5 +18,7 @@ Q6: List out last name, first name for all employees and rename  last name as â€
 S6: select lastName as 'Name of employee', firstName from employees order by lastName;
 
 Q7: List out the customers having credit limit is more than 70000 display in descending order by their last name.
+S7: select * from customers where creditLimit > 70000 order by contactLastName;
 
 Q8: List out all customers belongs to city Singapore, Liverpool or NYC
+S8: select * from customers where city in('Singapore', 'Liverppol', 'NYC'); 
