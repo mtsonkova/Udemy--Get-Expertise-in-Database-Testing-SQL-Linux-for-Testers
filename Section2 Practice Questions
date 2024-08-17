@@ -1,8 +1,10 @@
 
 Q1: Fetch & display all the employee details
-S1: 
+S1: select * from employees;
 
 Q2: Fetch & display employee details for the employees having job Title='Sales Rep' and Employee number between 1200 and 1500
+S2: select * from employees where jobTitle='Sales Rep' and employeeNumber between 1200 and 1500;
+
 
 Q3: Fetch & display employee details for the employees having office code 2 or more than 2 and job title is not Sales Rep
 
