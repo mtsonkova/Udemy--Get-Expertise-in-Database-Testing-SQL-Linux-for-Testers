@@ -21,10 +21,10 @@ S7: select * from customers where contactFirstName like 'S%' and length(contactF
 S7: select * from customers where contactFirstName like 'S____'; 
 
 Q8: List out the customers whose first name length is exactly 8
-S8: elect * from customers where length(contactFirstName) = 8; 
+S8: select * from customers where length(contactFirstName) = 8; 
 
 Q9: List out the customers whose first name starting with a and ending with e
-S9:
+S9: select * from customers where contactFirstName like 'A%e'; 
 
 Q10: List out the customers whose first name contains ee
-S10:
+S10: select * from customers where contactFirstName like '%e%e%';
