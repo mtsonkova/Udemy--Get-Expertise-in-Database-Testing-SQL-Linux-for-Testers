@@ -1,0 +1,29 @@
+Q1: List the details about customer first name “SMITH”
+S1: select * from customers where contactFirstName='SMITH';
+
+Q2: List out the employees who are working in office code 1, 3 , 5
+S2: select * from employees where officeCode in(1, 3, 5);
+
+Q3: List out the customers having credit limit between 50000 and 95000
+S3: select * from customers where creditLimit between 50000 and 95000;
+
+Q4: List out the employees who are not working in office code 1 , 3
+S4: select * from employees where officeCode not in(1, 3, 5);
+
+Q5: List out the customers whose first name starts with “S”
+S5: select * from customers where contactFirstName like 'S%';
+
+Q6: List out the customers whose name start with “S” and end with “H”
+S6: select * from customers where contactFirstName like 'S%H';
+
+Q7: List out the customers whose first name length is 5 and start with “S”
+S7:
+
+Q8: List out the customers whose first name length is exactly 8
+S8:
+
+Q9: List out the customers whose first name starting with a and ending with e
+S9:
+
+Q10: List out the customers whose first name contains ee
+S10:
