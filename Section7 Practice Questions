@@ -17,7 +17,28 @@ S1: select count(employeeNumber) as 'employees',  city from employees
  where city='NYC'
 
 Q1: Display the employee details with their manager names.
-S1: 
+S1: select concat(A.firstName,' ',A.lastName) as employee, concat(B.firstName,' ',B.lastName) as manager
+ from employees A inner join employees B 
+ on A.reportsTo = B.employeeNumber;
 
 Q1: Display the manager name having maximum number of employees under it
-S1: 
+S1: WITH ManagerCounts AS (
+    SELECT 
+        CONCAT(B.firstName, ' ', B.lastName) AS manager,
+        COUNT(*) AS numEmployees
+    FROM 
+        employees A 
+    INNER JOIN 
+        employees B 
+    ON 
+        A.reportsTo = B.employeeNumber
+    GROUP BY 
+        B.employeeNumber
+)
+SELECT 
+    manager
+FROM 
+    ManagerCounts
+ORDER BY 
+    numEmployees DESC
+LIMIT 1;
