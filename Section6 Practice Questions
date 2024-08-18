@@ -1,0 +1,8 @@
+Q1: Show Count of employees who are working in different office in the organization
+S1: select distinct officeCode, count(employeeNumber) as employees from employees  group by officeCode;
+
+Q2: List out the maximum credit limit of customers belongs to different states
+S2: select distinct state, max(creditLimit) as 'maximum credit limit' from customers group by state;
+
+Q3: List out the office id having atleast four employees.
+S3: select distinct officeCode, count(employeeNumber) as 'employees' from employees group by officeCode having count(employeeNumber) >=4;
