@@ -1,0 +1,23 @@
+Q1: List our employees with their office city and state
+S1: select employeeNumber, firstName, lastName, city, state from employees
+inner join offices on employees.officeCode = offices.officeCode;
+
+
+Q1: Display employees with their designations (jobs) and country they are working
+S1: select employeeNumber, firstName, lastName, jobTitle, country from employees
+inner join offices on employees.officeCode = offices.officeCode;
+
+Q1: How many in different jobs in our organization
+S1: select jobTitle, count(*) from employees filter group by jobTitle;
+
+Q1: How many employees working in “New York”.
+S1: select count(employeeNumber) as 'employees',  city from employees
+ inner join offices
+ on employees.officeCode = offices.officeCode
+ where city='NYC'
+
+Q1: Display the employee details with their manager names.
+S1: 
+
+Q1: Display the manager name having maximum number of employees under it
+S1: 
